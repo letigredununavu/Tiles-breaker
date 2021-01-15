@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/icon.png" type="Texture" id=1]
+[ext_resource path="res://player.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[node name="player" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 16, 16 )
+scale = Vector2( 1.5, 1.5 )
+shape = SubResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 16, 16 )
+enabled = true
+cast_to = Vector2( 0, 16 )
+
+[node name="playerArea" type="Area2D" parent="."]
+position = Vector2( 16, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerArea"]
+shape = SubResource( 2 )

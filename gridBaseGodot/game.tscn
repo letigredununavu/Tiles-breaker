@@ -1,0 +1,297 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://pixil-frame-0.png" type="Texture" id=3]
+[ext_resource path="res://safePlate.png" type="Texture" id=4]
+[ext_resource path="res://safePlate.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game.gd" type="Script" id=6]
+[ext_resource path="res://levelClearPlate.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 32, 32, 0, 32, 0, 0, 32, 0 )
+
+[sub_resource type="TileSet" id=4]
+0/name = "icon.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 0.741176, 0.34902, 0.34902, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "pixil-frame-0.png 1"
+1/texture = ExtResource( 3 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 2 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "safePlate.png 2"
+2/texture = ExtResource( 4 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 0, 32, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 3 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+
+[node name="game" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TileMap" type="TileMap" parent="."]
+light_mask = -2147483647
+tile_set = SubResource( 4 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 64, 0, 34, 64, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 65536, 1, 0, 65548, 1, 0, 131072, 1, 0, 131084, 1, 0, 196608, 1, 0, 196620, 1, 0, 262144, 1, 0, 262156, 1, 0, 327680, 1, 0, 327692, 1, 0, 393216, 1, 0, 393228, 1, 0, 458752, 1, 0, 458753, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0 )
+
+[node name="levelClearPlate" parent="." instance=ExtResource( 7 )]
+position = Vector2( 352, 192 )
+
+[node name="gameTiles" type="Node2D" parent="."]
+
+[node name="Node2D29" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 96, 64 )
+
+[node name="Node2D28" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 224, 64 )
+
+[node name="Node2D27" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 160, 64 )
+
+[node name="Node2D26" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 192, 64 )
+
+[node name="Node2D2" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 128, 32 )
+
+[node name="Node2D9" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 160, 96 )
+
+[node name="Node2D10" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 352, 32 )
+
+[node name="Node2D11" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 320, 32 )
+
+[node name="Node2D12" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 288, 32 )
+
+[node name="Node2D13" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 256, 32 )
+
+[node name="Node2D14" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 224, 32 )
+
+[node name="Node2D15" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 192, 32 )
+
+[node name="Node2D16" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 160, 32 )
+
+[node name="Node2D3" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 96, 32 )
+
+[node name="Node2D6" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 32, 64 )
+
+[node name="Node2D7" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 64, 64 )
+
+[node name="Node2D8" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 64, 32 )
+
+[node name="Node2D4" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 32, 32 )
+
+[node name="Node2D5" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 128, 64 )
+
+[node name="Node2D17" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 192, 96 )
+
+[node name="Node2D30" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 160, 128 )
+
+[node name="Node2D48" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 320, 160 )
+
+[node name="Node2D57" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 192, 192 )
+
+[node name="Node2D58" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 160, 192 )
+
+[node name="Node2D59" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 224, 192 )
+
+[node name="Node2D60" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 288, 192 )
+
+[node name="Node2D61" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 256, 192 )
+
+[node name="Node2D62" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 128, 192 )
+
+[node name="Node2D63" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 320, 192 )
+
+[node name="Node2D64" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 96, 192 )
+
+[node name="Node2D65" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 64, 192 )
+
+[node name="Node2D66" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 32, 192 )
+
+[node name="Node2D67" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 352, 160 )
+
+[node name="Node2D49" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 288, 160 )
+
+[node name="Node2D50" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 256, 160 )
+
+[node name="Node2D51" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 224, 160 )
+
+[node name="Node2D52" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 192, 160 )
+
+[node name="Node2D53" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 160, 160 )
+
+[node name="Node2D54" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 128, 160 )
+
+[node name="Node2D55" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 192, 128 )
+
+[node name="Node2D40" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 64, 160 )
+
+[node name="Node2D41" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 32, 160 )
+
+[node name="Node2D42" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 352, 128 )
+
+[node name="Node2D43" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 320, 128 )
+
+[node name="Node2D44" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 288, 128 )
+
+[node name="Node2D45" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 256, 128 )
+
+[node name="Node2D46" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 224, 128 )
+
+[node name="Node2D47" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 96, 160 )
+
+[node name="Node2D31" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 128, 128 )
+
+[node name="Node2D32" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 96, 128 )
+
+[node name="Node2D33" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 64, 128 )
+
+[node name="Node2D34" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 32, 128 )
+
+[node name="Node2D35" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 352, 96 )
+
+[node name="Node2D36" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 320, 96 )
+
+[node name="Node2D37" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 288, 96 )
+
+[node name="Node2D38" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 256, 96 )
+
+[node name="Node2D39" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 224, 96 )
+
+[node name="Node2D18" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 128, 96 )
+
+[node name="Node2D19" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 96, 96 )
+
+[node name="Node2D20" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 64, 96 )
+
+[node name="Node2D21" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 32, 96 )
+
+[node name="Node2D22" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 352, 64 )
+
+[node name="Node2D23" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 288, 64 )
+
+[node name="Node2D24" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 320, 64 )
+
+[node name="Node2D25" parent="gameTiles" instance=ExtResource( 5 )]
+position = Vector2( 256, 64 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 32, 32 )

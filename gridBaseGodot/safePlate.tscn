@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/safePlate.png" type="Texture" id=1]
+[ext_resource path="res://safePlate.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10.6654, 10.18 )
+
+[node name="safePlate" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="safePlateArea" type="Area2D" parent="."]
+position = Vector2( 16, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="safePlateArea"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="safePlateArea"]
+texture = ExtResource( 1 )
+[connection signal="area_entered" from="safePlateArea" to="." method="_on_safePlateArea_area_entered"]

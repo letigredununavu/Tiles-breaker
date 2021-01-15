@@ -1,0 +1,159 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://safePlate.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://walls.tscn" type="PackedScene" id=3]
+[ext_resource path="res://levelClearPlate.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game.gd" type="Script" id=5]
+
+[node name="level3" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="TileMap" parent="." instance=ExtResource( 3 )]
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 65536, 0, 0, 65541, 0, 0, 131072, 0, 0, 131077, 0, 0, 196608, 0, 0, 196610, 0, 0, 196611, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 262144, 0, 0, 262149, 0, 0, 262156, 0, 0, 327680, 0, 0, 327681, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327689, 0, 0, 327692, 0, 0, 393216, 0, 0, 393223, 0, 0, 393228, 0, 0, 458752, 0, 0, 458764, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0 )
+
+[node name="levelClearPlate" parent="." instance=ExtResource( 4 )]
+position = Vector2( 320, 160 )
+
+[node name="gameTiles" type="Node2D" parent="."]
+
+[node name="safePlate2" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 288, 224 )
+
+[node name="safePlate3" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 288, 192 )
+
+[node name="safePlate4" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 320, 224 )
+
+[node name="safePlate5" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 320, 192 )
+
+[node name="safePlate46" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 352, 224 )
+
+[node name="safePlate47" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 352, 192 )
+
+[node name="safePlate6" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 352, 160 )
+
+[node name="safePlate7" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 352, 128 )
+
+[node name="safePlate8" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 320, 128 )
+
+[node name="safePlate9" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 288, 128 )
+
+[node name="safePlate10" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 256, 224 )
+
+[node name="safePlate11" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 256, 192 )
+
+[node name="safePlate12" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 256, 160 )
+
+[node name="safePlate13" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 256, 128 )
+
+[node name="safePlate14" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 224, 224 )
+
+[node name="safePlate15" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 224, 160 )
+
+[node name="safePlate16" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 224, 128 )
+
+[node name="safePlate17" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 224 )
+
+[node name="safePlate18" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 192 )
+
+[node name="safePlate19" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 160 )
+
+[node name="safePlate20" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 192, 128 )
+
+[node name="safePlate21" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 160, 224 )
+
+[node name="safePlate22" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 160, 192 )
+
+[node name="safePlate23" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 128, 224 )
+
+[node name="safePlate24" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 128, 192 )
+
+[node name="safePlate25" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 96, 224 )
+
+[node name="safePlate26" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 96, 192 )
+
+[node name="safePlate27" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 64, 224 )
+
+[node name="safePlate28" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 64, 192 )
+
+[node name="safePlate29" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 32, 224 )
+
+[node name="safePlate30" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 32, 192 )
+
+[node name="safePlate31" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 64, 160 )
+
+[node name="safePlate32" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 64, 128 )
+
+[node name="safePlate33" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 32, 128 )
+
+[node name="safePlate34" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 32, 96 )
+
+[node name="safePlate35" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 32, 64 )
+
+[node name="safePlate36" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 64, 64 )
+
+[node name="safePlate37" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 96, 64 )
+
+[node name="safePlate38" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 32, 32 )
+
+[node name="safePlate39" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 96, 32 )
+
+[node name="safePlate40" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 64, 32 )
+
+[node name="safePlate41" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 128, 32 )
+
+[node name="safePlate42" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 128, 96 )
+
+[node name="safePlate43" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 128, 64 )
+
+[node name="safePlate44" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 128, 128 )
+
+[node name="safePlate45" parent="gameTiles" instance=ExtResource( 1 )]
+position = Vector2( 96, 128 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 96, 128 )
