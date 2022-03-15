@@ -15,7 +15,9 @@ The way the level changes should not be with an if-else statement, but with a le
 ![Level1](gridBaseGodot/images/2.png)
 ![Level2](gridBaseGodot/images/godot3.png)
 ![Level3](gridBaseGodot/images/godot4.png)
+<style>
 img[alt=Menu] { width: 200px; Height: 200px; }
 img[alt=Level1] { width: 200px; Height: 200px; }
 img[alt=Level2] { width: 200px; Height: 200px; }
 img[alt=Level3] { width: 200px; Height: 200px; }
+</tyle>
