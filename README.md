@@ -11,6 +11,11 @@ You can only finish the level if you've walked on every tile once
 Add levels, add portals, add better art, add lives to the player, well a lot
 
 The way the level changes should not be with an if-else statement, but with a level variable (int)
+<img src="gridBaseGodot/images/Godot1.png" alt="drawing" width="200"/>
+<img src="gridBaseGodot/images/2.png" alt="drawing" width="200"/>
+<img src="gridBaseGodot/images/godot3.png" alt="drawing" width="200"/>
+<img src="gridBaseGodot/images/godot4.png" alt="drawing" width="200"/>
+
 ![Menu](gridBaseGodot/images/Godot1.png =200x200)
 ![Level1](gridBaseGodot/images/2.png)
 ![Level2](gridBaseGodot/images/godot3.png)
