@@ -11,3 +11,7 @@ You can only finish the level if you've walked on every tile once
 Add levels, add portals, add better art, add lives to the player, well a lot
 
 The way the level changes should not be with an if-else statement, but with a level variable (int)
+![Menu](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/Godot1.png)
+![Level 1](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/2.png)
+![Level 2](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/Godot3.png)
+![Level 3](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/Godot4.png)
