@@ -10,19 +10,11 @@ You can only finish the level if you've walked on every tile once
 # Potentials Upgrades
 Add levels, add portals, add better art, add lives to the player, well a lot
 
-The way the level changes should not be with an if-else statement, but with a level variable (int)
-<img src="gridBaseGodot/images/Godot1.png" alt="drawing" width="300" height="300"/>
-<img src="gridBaseGodot/images/2.png" alt="drawing" width="300" height="300"/>
-<img src="gridBaseGodot/images/godot3.png" alt="drawing" width="300" height="300"/>
-<img src="gridBaseGodot/images/godot4.png" alt="drawing" width="300" height="300"/>
-
-![Menu](gridBaseGodot/images/Godot1.png =200x200)
-![Level1](gridBaseGodot/images/2.png)
-![Level2](gridBaseGodot/images/godot3.png)
-![Level3](gridBaseGodot/images/godot4.png)
-<style>
-img[alt=Menu] { width: 200px; Height: 200px; }
-img[alt=Level1] { width: 200px; Height: 200px; }
-img[alt=Level2] { width: 200px; Height: 200px; }
-img[alt=Level3] { width: 200px; Height: 200px; }
-</tyle>
+The way the level changes should not be with an if-else statement, but with a level variable (int)\
+<img src="gridBaseGodot/images/Godot1.png" alt="drawing" width="600" height="400"/>\
+Level 1\
+<img src="gridBaseGodot/images/2.png" alt="drawing" width="300" height="300"/>\
+Level 2\
+<img src="gridBaseGodot/images/godot3.png" alt="drawing" width="300" height="300"/>\
+Level 3\
+<img src="gridBaseGodot/images/godot4.png" alt="drawing" width="300" height="300"/>\
