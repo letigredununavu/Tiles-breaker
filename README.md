@@ -14,4 +14,4 @@ The way the level changes should not be with an if-else statement, but with a le
 ![Menu](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/Godot1.png)
 ![Level 1](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/2.png)
 ![Level 2](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/Godot3.png)
-![Level 3](https://github.com/letigredununavu/Tiles-breaker/tree/main/gridBaseGodot/images/Godot4.png)
+![Level 3](gridBaseGodot/images/Godot4.png)
